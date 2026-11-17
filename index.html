@@ -45,6 +45,15 @@
     p { margin: 0 0 15px; }
     .job-market { margin: 17px 0 0; color: var(--ink); }
     .job-market strong { font-weight: 750; }
+    /* About portrait: the page remains a single column below this section. */
+    .about-layout { display: grid; grid-template-columns: minmax(0, 1fr) 205px; gap: 32px; align-items: start; }
+    .about-copy { min-width: 0; }
+    .profile-photo { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid var(--rule); border-radius: 8px; }
+    @media (max-width: 640px) {
+      .about-layout { grid-template-columns: 1fr; gap: 23px; }
+      .about-copy { grid-column: 1; grid-row: 2; }
+      .profile-photo { grid-column: 1; grid-row: 1; width: 180px; max-width: 100%; justify-self: center; }
+    }
     .lead { color: var(--muted); font-size: 14px; margin-top: -6px; margin-bottom: 22px; }
     .education-entry + .education-entry { margin-top: 20px; }
     .education-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 3px; }
@@ -127,9 +136,21 @@
         <section class="section" id="about">
           <span class="eyebrow">Profile</span>
           <h2>About Me</h2>
-          <p class="intro">I am a Ph.D. candidate in Computational Applied Mathematics and Operations Research at Rice University, advised by Professor Guodong Pang.</p>
-          <p>My research focuses on applied probability, stochastic control, and reinforcement learning, with an emphasis on risk-sensitive control and its applications to queueing systems and stochastic networks.</p>
-          <p class="job-market"><strong>I am on the 2026–2027 academic job market.</strong></p>
+          <div class="about-layout">
+            <div class="about-copy">
+              <p class="intro">I am a Ph.D. candidate in Computational Applied Mathematics and Operations Research at Rice University, advised by Professor Guodong Pang.</p>
+              <p>My research focuses on applied probability, stochastic control, and reinforcement learning, with an emphasis on risk-sensitive control and its applications to queueing systems and stochastic networks.</p>
+              <p class="job-market"><strong>I am on the 2026–2027 academic job market.</strong></p>
+            </div>
+            <!-- Save the photo as nicola-sassone.jpg in this same folder for reliable local hosting.
+                 If that file is not present, the image falls back to the Rice-hosted original. -->
+            <img class="profile-photo"
+                 src="nicola-sassone.jpg"
+                 alt="Portrait of Nicola G. Sassone"
+                 width="600" height="600"
+                 decoding="async" fetchpriority="high" referrerpolicy="no-referrer"
+                 onerror="this.onerror=null; this.src='https://profiles.rice.edu/sites/g/files/bxs3881/files/2022-11/Sassone%2C%20Nicola%20G%20%28600x600%29_0.jpg';">
+          </div>
         </section>
 
         <section class="section" id="education">
@@ -155,6 +176,7 @@
         <section class="section" id="publications">
           <span class="eyebrow">Research</span>
           <h2>Publications &amp; Manuscripts</h2>
+          <p class="lead">Published work and research manuscripts. Paper links are provided where publicly available.</p>
           <div class="papers">
             <!-- To update a publication, edit its title, authors, venue, status, and paper link below. -->
             <article class="paper">
