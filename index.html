@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nicola G. Sassone is a Ph.D. candidate in Computational Applied Mathematics and Operations Research at Rice University, researching stochastic control, reinforcement learning, and risk-sensitive decision-making.">
+  <meta name="theme-color" content="#f8fafc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nicola G. Sassone | Rice University">
+  <meta property="og:description" content="Research in applied probability, stochastic control, reinforcement learning, and risk-sensitive decision-making.">
+  <title>Nicola G. Sassone | Rice University</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f9fb;
+      --ink: #1b2838;
+      --muted: #526579;
+      --soft: #617184;
+      --rule: #e1e7ee;
+      --accent: #17658a;
+      --accent-hover: #0d4a6a;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-hover); }
+    a:focus-visible { outline: 3px solid #64afd0; outline-offset: 4px; border-radius: 3px; }
+    .skip-link { position: absolute; left: 12px; top: -60px; background: #fff; z-index: 100; padding: 9px 14px; }
+    .skip-link:focus { top: 12px; }
+    .site { max-width: 970px; margin: auto; padding: 0 28px; }
+    .header { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 82px; border-bottom: 1px solid var(--rule); }
+    .wordmark { font-weight: 750; font-size: 18px; letter-spacing: -.025em; margin: 0; white-space: nowrap; line-height: 1.3; }
+    .wordmark a { color: var(--ink); text-decoration: none; }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px 21px; align-items: center; font-size: 13px; font-weight: 650; }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--accent); }
+    .layout { max-width: 850px; margin: 0 auto; padding: 45px 0 57px; }
+    main { min-width: 0; }
+    .section { padding: 0 0 30px; margin-bottom: 31px; border-bottom: 1px solid var(--rule); }
+    .section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .eyebrow { color: var(--accent); font-weight: 750; letter-spacing: .14em; text-transform: uppercase; font-size: 11px; display: block; margin: 1px 0 10px; }
+    main h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(27px, 3vw, 32px); font-weight: 600; letter-spacing: -.035em; line-height: 1.2; margin: 0 0 17px; }
+    .intro { font-size: 17px; color: #36495d; max-width: 80ch; margin: 0 0 15px; }
+    p { margin: 0 0 15px; }
+    .job-market { margin: 17px 0 0; color: var(--ink); }
+    .job-market strong { font-weight: 750; }
+    .lead { color: var(--muted); font-size: 14px; margin-top: -6px; margin-bottom: 22px; }
+    .education-entry + .education-entry { margin-top: 20px; }
+    .education-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 3px; }
+    .education-heading h3 { margin: 0; font-size: 15px; line-height: 1.5; }
+    .education-date { color: var(--soft); font-size: 13px; white-space: nowrap; }
+    .education-entry p { margin: 0; font-size: 14px; line-height: 1.6; }
+    .education-entry .education-detail { color: var(--muted); font-size: 13.5px; }
+    .papers { display: flex; flex-direction: column; gap: 23px; }
+    .paper { padding: 0 0 0 17px; border-left: 2px solid #c5d9e3; }
+    .status { color: #5f7080; font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 4px; }
+    .paper h3 { font-size: 16px; line-height: 1.45; font-weight: 700; margin: 0 0 5px; color: var(--ink); }
+    .paper h3 a { color: var(--ink); text-decoration: none; }
+    .paper h3 a:hover { color: var(--accent); text-decoration: underline; }
+    .authors, .venue { color: var(--muted); margin: 0; font-size: 13.5px; line-height: 1.55; }
+    .authors strong { color: #34475b; }
+    .venue { margin-top: 3px; }
+    .paper-links { display: flex; gap: 14px; margin-top: 7px; font-size: 13px; font-weight: 650; }
+    .working-paper { padding-left: 17px; border-left: 2px solid var(--rule); margin-bottom: 18px; }
+    .working-paper:last-child { margin-bottom: 0; }
+    .working-paper h3 { font-size: 15px; font-weight: 700; line-height: 1.48; margin: 0 0 4px; }
+    .teaching-group { display: grid; grid-template-columns: 155px minmax(0,1fr); gap: 22px; padding: 17px 0; border-top: 1px solid var(--rule); }
+    .teaching-group:first-of-type { padding-top: 5px; border-top: none; }
+    .teach-label { font-weight: 700; color: #2d4053; font-size: 13.5px; }
+    .teach-list { list-style: none; padding: 0; margin: 0; }
+    .teach-list li { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 9px; font-size: 13.5px; line-height: 1.48; }
+    .teach-list li:last-child { margin-bottom: 0; }
+    .teach-list .term { color: var(--soft); white-space: nowrap; font-size: 12.5px; }
+    .conference { padding: 20px 0; border-top: 1px solid var(--rule); }
+    .conference:first-child { padding-top: 0; border-top: none; }
+    .conference:last-child { padding-bottom: 0; }
+    .conference h3 { font-size: 15px; line-height: 1.5; margin: 0 0 11px; font-weight: 750; }
+    .presentation-list { list-style: none; padding: 0; margin: 0 0 0 17px; }
+    .presentation-list li { border-left: 2px solid var(--rule); padding-left: 15px; margin: 0 0 14px; }
+    .presentation-list li:last-child { margin-bottom: 0; }
+    .presentation-title { font-size: 14px; line-height: 1.5; margin: 0 0 3px; color: #34475b; }
+    .presentation-meta { font-size: 12.5px; line-height: 1.5; color: var(--soft); margin: 0; }
+    .contact-email { margin: 0; overflow-wrap: anywhere; }
+    .footer { border-top: 1px solid var(--rule); padding: 21px 0 35px; font-size: 12px; color: var(--soft); display: flex; gap: 10px; justify-content: space-between; }
+    @media (max-width: 760px) {
+      .header { flex-direction: column; align-items: flex-start; justify-content: center; gap: 12px; padding: 19px 0; }
+      .nav { gap: 8px 20px; }
+    }
+    @media (max-width: 560px) {
+      .site { padding: 0 20px; }
+      .wordmark { font-size: 18px; }
+      .nav { font-size: 12px; gap: 8px 17px; }
+      .layout { padding: 29px 0 40px; }
+      .section { padding-bottom: 26px; margin-bottom: 27px; }
+      .intro { font-size: 16px; }
+      .education-heading { display: block; }
+      .education-date { display: block; margin: 2px 0 5px; }
+      .teaching-group { grid-template-columns: 1fr; gap: 9px; }
+      .teach-list li { display: block; }
+      .teach-list .term { display: block; margin-top: 2px; }
+      .presentation-list { margin-left: 8px; }
+      .presentation-list li { padding-left: 12px; }
+      .footer { flex-direction: column; gap: 5px; }
+      main h2 { font-size: 27px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="top">
+    <header class="header">
+      <h1 class="wordmark"><a href="#top">Nicola G. Sassone</a></h1>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#presentations">Presentations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main id="main">
+        <section class="section" id="about">
+          <span class="eyebrow">Profile</span>
+          <h2>About Me</h2>
+          <p class="intro">I am a Ph.D. candidate in Computational Applied Mathematics and Operations Research at Rice University, advised by Professor Guodong Pang.</p>
+          <p>My research focuses on applied probability, stochastic control, and reinforcement learning, with an emphasis on risk-sensitive control and its applications to queueing systems and stochastic networks.</p>
+          <p class="job-market"><strong>I am on the 2026–2027 academic job market.</strong></p>
+        </section>
+
+        <section class="section" id="education">
+          <h2>Education</h2>
+          <div class="education-entry">
+            <div class="education-heading">
+              <h3>Rice University</h3>
+              <span class="education-date">Expected May 2027</span>
+            </div>
+            <p>Ph.D. candidate in Computational Applied Mathematics and Operations Research</p>
+            <p class="education-detail">Advisor: Professor Guodong Pang</p>
+          </div>
+          <div class="education-entry">
+            <div class="education-heading">
+              <h3>University of California, Los Angeles</h3>
+              <span class="education-date">June 2022</span>
+            </div>
+            <p>B.S. in Mathematics</p>
+            <p class="education-detail">Specialization in Computing · Minor in Philosophy</p>
+          </div>
+        </section>
+
+        <section class="section" id="publications">
+          <span class="eyebrow">Research</span>
+          <h2>Publications &amp; Manuscripts</h2>
+          <div class="papers">
+            <!-- To update a publication, edit its title, authors, venue, status, and paper link below. -->
+            <article class="paper">
+              <p class="status">Published · 2026</p>
+              <h3><a href="https://doi.org/10.1007/s11134-026-09977-2" target="_blank" rel="noopener noreferrer">Ergodic risk-sensitive admission control problem for a Markovian multi-server queueing system with abandonment</a></h3>
+              <p class="authors"><strong>N. G. Sassone</strong> and G. Pang</p>
+              <p class="venue"><em>Queueing Systems</em>, volume 110, article 24 (2026).</p>
+              <div class="paper-links"><a href="https://doi.org/10.1007/s11134-026-09977-2" target="_blank" rel="noopener noreferrer">Journal article ↗</a></div>
+            </article>
+            <article class="paper">
+              <p class="status">Submitted · 2026</p>
+              <h3><a href="https://arxiv.org/abs/2607.06863" target="_blank" rel="noopener noreferrer">Jacobi-like relative value iteration algorithms for ergodic risk-sensitive control of Markov chains</a></h3>
+              <p class="authors">S. R. Anugu, G. Pang, and <strong>N. G. Sassone</strong></p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2607.06863" target="_blank" rel="noopener noreferrer">arXiv preprint ↗</a></div>
+            </article>
+            <article class="paper">
+              <p class="status">Submitted · 2026</p>
+              <h3><a href="https://www.cmor-faculty.rice.edu/~gp36/ERSC_Drift_Rate.pdf" target="_blank" rel="noopener noreferrer">Optimal drift control of a two-sided reflected Brownian motion under an ergodic risk-sensitive cost criterion</a></h3>
+              <p class="authors"><strong>N. G. Sassone</strong> and G. Pang</p>
+              <div class="paper-links"><a href="https://www.cmor-faculty.rice.edu/~gp36/ERSC_Drift_Rate.pdf" target="_blank" rel="noopener noreferrer">Manuscript PDF ↗</a></div>
+            </article>
+            <article class="paper">
+              <p class="status">In preparation · 2026</p>
+              <h3>Two-timescale variational Q-learning for ergodic risk-sensitive control of Markov chains</h3>
+              <p class="authors"><strong>N. G. Sassone</strong> and G. Pang</p>
+              <p class="venue">Manuscript in preparation for submission.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="working-papers">
+          <span class="eyebrow">Ongoing research</span>
+          <h2>Working Papers</h2>
+          <div class="working-paper">
+            <h3>Relative value iteration algorithms for ergodic risk-sensitive control of Markov chains with countable state space</h3>
+            <p class="authors">S. R. Anugu, G. Pang, and <strong>N. G. Sassone</strong></p>
+          </div>
+          <div class="working-paper">
+            <h3>Risk-sensitive admission control for many-server queues with abandonment</h3>
+            <p class="authors"><strong>N. G. Sassone</strong> and G. Pang</p>
+          </div>
+        </section>
+
+        <section class="section" id="teaching">
+          <span class="eyebrow">Instruction</span>
+          <h2>Teaching</h2>
+          <p class="lead">Teaching, learning-assistant, and grading experience at Rice University and UCLA.</p>
+          <div class="teaching-group">
+            <div class="teach-label">Teaching Assistant<br><span style="color:var(--soft);font-weight:400">Rice University</span></div>
+            <ul class="teach-list">
+              <li><span>CMOR 302 · Matrix Analysis</span><span class="term">Fall 2026</span></li>
+              <li><span>CMOR 360 · Introduction to Operations Research</span><span class="term">Spring 2026</span></li>
+              <li><span>CMOR 350 · Stochastic Models</span><span class="term">Spring 2025</span></li>
+            </ul>
+          </div>
+          <div class="teaching-group">
+            <div class="teach-label">Grader<br><span style="color:var(--soft);font-weight:400">Rice University</span></div>
+            <ul class="teach-list">
+              <li><span>CMOR 551 · Simulation Modeling and Analysis</span><span class="term">Fall 2023–25</span></li>
+              <li><span>CMOR 554 · Applied Stochastic Processes</span><span class="term">Spring 2024</span></li>
+              <li><span>CMOR 555 · Stochastic Control and Applications</span><span class="term">Spring 2023</span></li>
+              <li><span>CMOR 360 · Introduction to Operations Research</span><span class="term">2022</span></li>
+            </ul>
+          </div>
+          <div class="teaching-group">
+            <div class="teach-label">Learning Assistant<br><span style="color:var(--soft);font-weight:400">UCLA</span></div>
+            <ul class="teach-list">
+              <li><span>MATH 115A · Linear Algebra</span><span class="term">Winter 2022</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="presentations">
+          <h2>Conferences and Presentations</h2>
+          <div class="conferences">
+            <article class="conference">
+              <h3>INFORMS Annual Meeting</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Optimal drift control of a two-sided reflected Brownian motion under an ergodic risk-sensitive cost criterion</p>
+                  <p class="presentation-meta">San Francisco, CA · <time datetime="2026-11-02">November 2, 2026</time></p>
+                </li>
+                <li>
+                  <p class="presentation-title">New relative value iteration algorithms for the ergodic risk-sensitive control of Markov chains</p>
+                  <p class="presentation-meta">Atlanta, GA · <time datetime="2025-10-27">October 27, 2025</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>Texas Colloquium on Distributed Learning</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Two-timescale variational Q-learning for ergodic risk-sensitive control of Markov chains</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2026-10-08">October 8, 2026</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>Stochastic Networks</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Optimal drift control of a two-sided reflected Brownian motion under an ergodic risk-sensitive cost criterion</p>
+                  <p class="presentation-meta">Chicago, IL · <time datetime="2026-06-16">June 16, 2026</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>INFORMS Applied Probability Society Conference</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">New relative value iteration algorithms for the ergodic risk-sensitive control of Markov chains</p>
+                  <p class="presentation-meta">Atlanta, GA · <time datetime="2025-07-01">July 1, 2025</time></p>
+                </li>
+                <li>
+                  <p class="presentation-title">Risk-sensitive admission control of multi-server queues with abandonment</p>
+                  <p class="presentation-meta">Atlanta, GA · <time datetime="2025-07-01">July 1, 2025</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>American Mathematical Society Fall Central Sectional Meeting</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">New relative value iteration algorithms for the ergodic risk-sensitive control of Markov chains</p>
+                  <p class="presentation-meta">San Antonio, TX · <time datetime="2024-09-15">September 15, 2024</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>Center for Computational Finance and Economic Systems Eubank Conference</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Minimizing total incidence of an epidemic with general infectious duration</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2024-04-22">April 22, 2024</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>Seminar on Stochastic Processes</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Minimizing total incidence of an epidemic with general infectious duration</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2024-03-14">March 14, 2024</time></p>
+                </li>
+              </ul>
+            </article>
+            <article class="conference">
+              <h3>Rice CMOR Graduate Seminar</h3>
+              <ul class="presentation-list">
+                <li>
+                  <p class="presentation-title">Optimal drift control of a two-sided reflected Brownian motion under an ergodic risk-sensitive cost criterion</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2026-09-02">September 2, 2026</time></p>
+                </li>
+                <li>
+                  <p class="presentation-title">Risk-sensitive admission control of multi-server queues with abandonment</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2025-08-30">August 30, 2025</time></p>
+                </li>
+                <li>
+                  <p class="presentation-title">New relative value iteration algorithms for the ergodic risk-sensitive control of Markov chains</p>
+                  <p class="presentation-meta">Houston, TX · <time datetime="2024-08-30">August 30, 2024</time></p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <h2>Contact</h2>
+          <p class="contact-email"><a href="mailto:ngs6@rice.edu">ngs6@rice.edu</a></p>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <span>© 2026 Nicola G. Sassone · Hosted with GitHub Pages</span>
+      <span>Last updated: November 2026</span>
+    </footer>
+  </div>
+</body>
+</html>
